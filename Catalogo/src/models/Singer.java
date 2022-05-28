@@ -8,7 +8,8 @@ public class Singer extends Artist {
 
     }
 
-    public Singer(int carrerTime) {
+    public Singer(int id, String name, int carrerTime) {
+        super(id, name);
         this.carrerTime = carrerTime;
     }
     
@@ -20,8 +21,13 @@ public class Singer extends Artist {
         this.carrerTime = carrerTime;
     }
 
+
     @Override
     public String toString() {
-        return super.toString();
+        return "{" +
+            " data = '"+ super.toString() + "'" +
+            " carrerTime='" + getCarrerTime() + "'" +
+            "}";
     }
+    
 }

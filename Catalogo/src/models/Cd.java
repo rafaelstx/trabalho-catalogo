@@ -8,7 +8,8 @@ public class Cd extends Media {
 
     }
 
-    public Cd(int tracks) {
+    public Cd(String name, double price, String barcode, int tracks, int artistId) {
+        super(name, price, barcode, artistId);
         this.tracks = tracks;
     }
 
@@ -20,8 +21,13 @@ public class Cd extends Media {
         this.tracks = tracks;
     }
 
+
     @Override
     public String toString() {
-        return super.toString();
+        return "{" +
+            " data = '"+ super.toString() + "'" +
+            " tracks='" + getTracks() + "'" +
+            "}";
     }
+
 }

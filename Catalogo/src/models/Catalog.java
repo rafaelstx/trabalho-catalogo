@@ -23,8 +23,12 @@ public class Catalog {
         this.medias = medias;
     }
 
+
     @Override
     public String toString() {
-        return super.toString();
+        return "{" +
+            " medias='" + getMedias() + "'" +
+            "}";
     }
+    
 }

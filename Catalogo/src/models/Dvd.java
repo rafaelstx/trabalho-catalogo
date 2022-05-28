@@ -1,29 +1,33 @@
 package models;
 
-import java.sql.Time;
-
 public class Dvd extends Media {
 
-    private Time time;
+    private Long duration;
     
     public Dvd() {
 
-    }
+    }        
 
-    public Dvd(Time time){
-        this.time = time;
+    public Dvd(String name, double price, String barcode, Long duration, int artistId) {
+        super(name, price, barcode, artistId);
+        this.duration = duration;
     }
     
-    public Time getTime() {
-        return this.time;
+    public Long getDuration() {
+        return this.duration;
     }
 
-    public void setTime(Time time) {
-        this.time = time;
+    public void setDuration(Long duration) {
+        this.duration = duration;
     }
+
 
     @Override
     public String toString() {
-        return super.toString();
+        return "{" +
+            " data = '"+ super.toString() + "'" +
+            " time='" + getDuration() + "'" +
+            "}";
     }
+    
 }

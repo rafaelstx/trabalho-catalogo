@@ -5,15 +5,17 @@ public class Media {
     private String name;
     private double price;
     private String barcode;
+    private int artistId;
 
     public Media() {
 
     }
 
-    public Media(String name, double price, String barcode){
+    public Media(String name, double price, String barcode, int artistId){
         this.name = name;
         this.price = price;
         this.barcode = barcode;
+        this.artistId = artistId;
     }
     
     public String getName() {
@@ -40,8 +42,23 @@ public class Media {
         this.barcode = barcode;
     }
 
+    public int getArtistId() {
+        return this.artistId;
+    }
+
+    public void setArtistId(int artistId) {
+        this.artistId = artistId;
+    }
+
+
     @Override
     public String toString() {
-        return super.toString();
+        return "{" +
+            " name='" + getName() + "'" +
+            ", price='" + getPrice() + "'" +
+            ", barcode='" + getBarcode() + "'" +
+            ", artistId='" + getArtistId() + "'" +
+            "}";
     }
+
 }

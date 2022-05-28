@@ -1,19 +1,25 @@
 package models;
 
-import java.util.ArrayList;
-import java.util.List;
-
 public class Artist {
 
+    private int id;
     private String name;
-    List<Media> media = new ArrayList<Media>();
 
     public Artist() {
 
     }
 
-    public Artist(String name) {
+    public Artist( int id, String name) {
+        this.id = id;
         this.name = name;
+    }
+
+    public int getId() {
+        return this.id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getName() {
@@ -26,6 +32,10 @@ public class Artist {
 
     @Override
     public String toString() {
-        return super.toString();
+        return "{" +
+            " id='" + getId() + "'" +
+            ", name='" + getName() + "'" +
+            "}";
     }
+    
 }

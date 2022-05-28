@@ -8,7 +8,8 @@ public class Band extends Artist {
 
     }
 
-    public Band(int membersNumb) {
+    public Band(int id, String name, int membersNumb) {
+        super(id, name);
         this.membersNumb = membersNumb;
     }
 
@@ -20,8 +21,13 @@ public class Band extends Artist {
         this.membersNumb = membersNumb;
     }
 
+
     @Override
     public String toString() {
-        return super.toString();
+        return "{" +
+            " data = '"+ super.toString() + "'" +
+            " membersNumb='" + getMembersNumb() + "'" +
+            "}";
     }
+    
 }

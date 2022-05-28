@@ -1,13 +1,16 @@
 package repositories;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import models.Artist;
 
 public class ArtistRepositoryImpl implements ArtistRepository {
 
-    Artist artist = new Artist();
+    List<Artist> artist = new ArrayList<>();
 
     @Override
-    public void createArtist(Artist artist) {
+    public void addArtist(List<Artist> artist) {
         this.artist = artist;
     }
 
