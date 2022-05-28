@@ -1,7 +1,5 @@
 import java.util.ArrayList;
 
-public class catalog {
-    ArrayList<media> medias = new ArrayList<media>() {
-        
-    };
+public class Catalog {
+    ArrayList<Media> medias = new ArrayList<Media>();
 }

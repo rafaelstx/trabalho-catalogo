@@ -1,7 +1,7 @@
 public class Cd extends Media {
     private int tracks;
 
-    public Cd {
+    public Cd() {
 
     }
 
