@@ -10,7 +10,7 @@ public class Media {
 
     }
 
-    public Media(String name,double price,String barcode){
+    public Media(String name, double price, String barcode){
         this.name = name;
         this.price = price;
         this.barcode = barcode;
