@@ -1,6 +1,16 @@
 package models;
+
 public class Band extends Artist {
+
     private int membersNumb;
+
+    public Band() {
+
+    }
+
+    public Band(int membersNumb) {
+        this.membersNumb = membersNumb;
+    }
 
     public int getMembersNumb() {
         return membersNumb;
@@ -12,7 +22,6 @@ public class Band extends Artist {
 
     @Override
     public String toString() {
-        // TODO Auto-generated method stub
         return super.toString();
     }
 }

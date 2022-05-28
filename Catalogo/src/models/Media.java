@@ -1,5 +1,7 @@
 package models;
+
 public class Media {
+
     private String name;
     private double price;
     private String barcode;
@@ -37,5 +39,9 @@ public class Media {
     public void setBarcode(String barcode) {
         this.barcode = barcode;
     }
- 
+
+    @Override
+    public String toString() {
+        return super.toString();
+    }
 }

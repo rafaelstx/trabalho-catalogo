@@ -1,8 +1,20 @@
 package models;
+
+import java.util.ArrayList;
+import java.util.List;
+
 public class Artist {
+
     private String name;
-    
-    //Media media = new Media();
+    List<Media> media = new ArrayList<Media>();
+
+    public Artist() {
+
+    }
+
+    public Artist(String name) {
+        this.name = name;
+    }
 
     public String getName() {
         return name;
@@ -14,8 +26,6 @@ public class Artist {
 
     @Override
     public String toString() {
-        // TODO Auto-generated method stub
         return super.toString();
     }
-
 }

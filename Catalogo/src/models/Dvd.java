@@ -1,7 +1,9 @@
 package models;
+
 import java.sql.Time;
 
 public class Dvd extends Media {
+
     private Time time;
     
     public Dvd() {
@@ -20,4 +22,8 @@ public class Dvd extends Media {
         this.time = time;
     }
 
+    @Override
+    public String toString() {
+        return super.toString();
+    }
 }

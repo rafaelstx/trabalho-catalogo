@@ -1,5 +1,7 @@
 package models;
+
 public class Cd extends Media {
+
     private int tracks;
 
     public Cd() {
@@ -16,5 +18,10 @@ public class Cd extends Media {
 
     public void setTracks(int tracks) {
         this.tracks = tracks;
+    }
+
+    @Override
+    public String toString() {
+        return super.toString();
     }
 }

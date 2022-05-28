@@ -1,7 +1,17 @@
 package models;
+
 public class Singer extends Artist {
+    
     private int carrerTime;
 
+    public Singer() {
+
+    }
+
+    public Singer(int carrerTime) {
+        this.carrerTime = carrerTime;
+    }
+    
     public int getCarrerTime() {
         return carrerTime;
     }
@@ -12,7 +22,6 @@ public class Singer extends Artist {
 
     @Override
     public String toString() {
-        // TODO Auto-generated method stub
         return super.toString();
     }
 }
