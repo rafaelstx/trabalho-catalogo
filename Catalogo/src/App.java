@@ -56,7 +56,6 @@ public class App {
         artistRepository.addArtist(artists);
 
 
-        artistRepository.showArtist();
-        catalogReposirory.showCatalog();
+        catalogReposirory.findMediasByArtist(2);
     }
 }
