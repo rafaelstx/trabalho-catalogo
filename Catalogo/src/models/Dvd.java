@@ -24,10 +24,10 @@ public class Dvd extends Media {
 
     @Override
     public String toString() {
-        return "{" +
+        return "{" + " DVD='" +"{" +
             " artist='"+ super.toString() + "'," +
             " duration='" + getDuration() + "'" +
-            "}";
+            "}" + "'}";
     }
     
 }

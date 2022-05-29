@@ -16,7 +16,21 @@ public class ArtistRepositoryImpl implements ArtistRepository {
 
     @Override
     public void showArtist() {
-        System.out.println(artist.toString());
+        int i = 1;
+        for (Artist art : artist) {
+            System.out.println(i + " - " + art.toString());
+            i++;
+        }
     }
-    
+
+    @Override
+    public void searchAux(int aux) {
+
+        for (Artist art : artist) {
+            if (art.getId() == aux) {
+                System.out.println(art.toString());
+            }
+        }
+    }
+
 }

@@ -21,8 +21,10 @@ public class CatalogRepositoryImpl implements CatalogRepository {
 
     @Override
     public void showCatalog() {
+        int i = 1;
         for (Media media : medias) {
-            System.out.println(media.toString());
+            System.out.println(i + " - " + media.toString());
+            i++;
         }
     }
 
@@ -30,7 +32,7 @@ public class CatalogRepositoryImpl implements CatalogRepository {
     public void findMediasByArtist(int id) {
 
         System.out.println("-------------------------------");
-        System.out.println("As mídias desse artista são: ");
+        System.out.println("As mídias desse artista são: \n");
 
         for (Media media : medias) {
             if (media.getArtistId() == id) {
@@ -39,6 +41,27 @@ public class CatalogRepositoryImpl implements CatalogRepository {
         }
 
         System.out.println("-------------------------------");
+    }
+
+    @Override
+    public int findArtistByMedia(int num) {
+
+        System.out.println("-------------------------------");
+        System.out.println("O artista dessa música é: \n");
+
+        int i = 1;
+        int aux = 0;
+
+        for (Media media : medias) {
+            if (i == num) {
+                aux = media.getArtistId();
+                return aux;
+            }
+            i++;
+        }
+
+        System.out.println("-------------------------------");
+        return 0;
     }
 
     @Override

@@ -7,4 +7,6 @@ import models.Artist;
 public interface ArtistRepository {
     void addArtist(List<Artist> artist);
     void showArtist();
+    void searchAux(int aux);
+
 }
