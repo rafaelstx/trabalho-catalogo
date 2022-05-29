@@ -30,14 +30,19 @@ public class CatalogRepositoryImpl implements CatalogRepository {
 
     @Override
     public void findMediasByArtist(int id) {
-
+        int vazio=0;
         System.out.println("-------------------------------");
         System.out.println("As mídias desse artista são: \n");
 
         for (Media media : medias) {
             if (media.getArtistId() == id) {
                 System.out.println(media.toString());
+                vazio++;
             }
+        }
+        if(vazio==0)
+        {
+            System.out.println("Esse artista não possui mídias!");
         }
 
         System.out.println("-------------------------------");
@@ -65,10 +70,24 @@ public class CatalogRepositoryImpl implements CatalogRepository {
     }
 
     @Override
-    public void isValidBarcode(Media media) {
+    public int isValidBarcode(Media media) {
         for (Media m : medias) {
-            m.equals(media);
+            if(m.equals(media)){
+                return 1;
+            }
         }
+        return 0;
+    }
+
+    @Override
+    public int isValidName(String name) {
+        for (Media m : medias) {
+
+            if(m.getName().equals(name)){
+                return 1;
+            }
+        }
+        return 0;
     }
 
 }

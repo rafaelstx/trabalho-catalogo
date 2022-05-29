@@ -33,4 +33,15 @@ public class ArtistRepositoryImpl implements ArtistRepository {
         }
     }
 
+    @Override
+    public int isValidName(String name) {
+        for (Artist art : artist) {
+
+            if(art.getName().equals(name)){
+                return 1;
+            }
+        }
+        return 0;
+    }
+
 }

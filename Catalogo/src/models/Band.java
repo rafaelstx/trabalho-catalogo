@@ -25,7 +25,7 @@ public class Band extends Artist {
     @Override
     public String toString() {
         return "{" +
-            " data = '"+ super.toString() + "'" +
+            " band= '"+ super.toString() + "'" +
             " membersNumb='" + getMembersNumb() + "'" +
             "}";
     }

@@ -9,5 +9,6 @@ public interface CatalogRepository {
     void showCatalog();
     void findMediasByArtist(int id);
     int findArtistByMedia(int num);
-    void isValidBarcode(Media media);
+    int isValidBarcode(Media media);
+    int isValidName(String name);
 }
