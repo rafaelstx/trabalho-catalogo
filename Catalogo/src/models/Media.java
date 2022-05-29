@@ -1,5 +1,7 @@
 package models;
 
+import java.util.Objects;
+
 public class Media {
 
     private String name;
@@ -50,7 +52,6 @@ public class Media {
         this.artistId = artistId;
     }
 
-
     @Override
     public String toString() {
         return "{" +
@@ -59,6 +60,12 @@ public class Media {
             ", barcode='" + getBarcode() + "'" +
             ", artistId='" + getArtistId() + "'" +
             "}";
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        Media media = (Media) o;
+        return Objects.equals(barcode, media.barcode);
     }
 
 }

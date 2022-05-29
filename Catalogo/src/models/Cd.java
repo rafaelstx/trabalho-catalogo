@@ -25,7 +25,7 @@ public class Cd extends Media {
     @Override
     public String toString() {
         return "{" +
-            " data = '"+ super.toString() + "'" +
+            " artist='"+ super.toString() + "'," +
             " tracks='" + getTracks() + "'" +
             "}";
     }

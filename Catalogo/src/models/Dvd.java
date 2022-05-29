@@ -25,8 +25,8 @@ public class Dvd extends Media {
     @Override
     public String toString() {
         return "{" +
-            " data = '"+ super.toString() + "'" +
-            " time='" + getDuration() + "'" +
+            " artist='"+ super.toString() + "'," +
+            " duration='" + getDuration() + "'" +
             "}";
     }
     

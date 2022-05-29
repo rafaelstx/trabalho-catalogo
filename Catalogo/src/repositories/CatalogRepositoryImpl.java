@@ -2,7 +2,6 @@ package repositories;
 
 import java.util.ArrayList;
 import java.util.List;
-
 import models.Catalog;
 import models.Media;
 
@@ -29,10 +28,23 @@ public class CatalogRepositoryImpl implements CatalogRepository {
 
     @Override
     public void findMediasByArtist(int id) {
+
+        System.out.println("-------------------------------");
+        System.out.println("As mídias desse artista são: ");
+
         for (Media media : medias) {
             if (media.getArtistId() == id) {
                 System.out.println(media.toString());
             }
+        }
+
+        System.out.println("-------------------------------");
+    }
+
+    @Override
+    public void isValidBarcode(Media media) {
+        for (Media m : medias) {
+            m.equals(media);
         }
     }
 
