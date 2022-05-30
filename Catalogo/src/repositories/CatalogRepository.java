@@ -6,7 +6,11 @@ import models.Media;
 public interface CatalogRepository {
     void addCatalog(Catalog catalog);
     void addMidia(Media media);
+    void removeMedia(int position);
     void showCatalog();
     void findMediasByArtist(int id);
-    void isValidBarcode(Media media);
+    int findArtistByMedia(int num);
+    boolean isValidBarcode(Media media);
+    boolean isValidName(String name);
+    int len();
 }

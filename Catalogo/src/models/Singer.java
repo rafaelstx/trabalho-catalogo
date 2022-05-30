@@ -25,7 +25,7 @@ public class Singer extends Artist {
     @Override
     public String toString() {
         return "{" +
-            " data = '"+ super.toString() + "'" +
+            " singer= '"+ super.toString() + "'" +
             " carrerTime='" + getCarrerTime() + "'" +
             "}";
     }

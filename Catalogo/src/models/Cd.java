@@ -24,10 +24,10 @@ public class Cd extends Media {
 
     @Override
     public String toString() {
-        return "{" +
+        return "{" + " CD='" +"{" +
             " artist='"+ super.toString() + "'," +
             " tracks='" + getTracks() + "'" +
-            "}";
+            "}" + "'}";
     }
 
 }

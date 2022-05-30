@@ -1,12 +1,9 @@
 package models;
 
-import java.util.Objects;
-
 public class Media {
 
-    private String name;
+    private String name, barcode;
     private double price;
-    private String barcode;
     private int artistId;
 
     public Media() {
@@ -44,6 +41,15 @@ public class Media {
         this.barcode = barcode;
     }
 
+    public void setBarcode(int barcode) {
+        int min = 100000;
+        int max = 999999;
+          
+        int random_int = (int)Math.floor(Math.random()*(max-min+1)+min);
+
+        this.barcode = Integer.toString(random_int);
+    }
+
     public int getArtistId() {
         return this.artistId;
     }
@@ -60,12 +66,6 @@ public class Media {
             ", barcode='" + getBarcode() + "'" +
             ", artistId='" + getArtistId() + "'" +
             "}";
-    }
-
-    @Override
-    public boolean equals(Object o) {
-        Media media = (Media) o;
-        return Objects.equals(barcode, media.barcode);
     }
 
 }
