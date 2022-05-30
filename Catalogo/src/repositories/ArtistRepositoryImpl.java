@@ -15,6 +15,11 @@ public class ArtistRepositoryImpl implements ArtistRepository {
     }
 
     @Override
+    public void addArtist(Artist artist) {
+        this.artist.add(artist);   
+    }
+
+    @Override
     public void showArtist() {
         int i = 1;
         for (Artist art : artist) {
@@ -34,14 +39,24 @@ public class ArtistRepositoryImpl implements ArtistRepository {
     }
 
     @Override
-    public int isValidName(String name) {
+    public boolean isValidName(String name) {
         for (Artist art : artist) {
 
             if(art.getName().equals(name)){
-                return 1;
+                return true;
             }
         }
-        return 0;
+        return false;
+    }
+
+    @Override
+    public void removeArtist(int position) {
+        artist.remove(position);
+    }
+
+    @Override
+    public int len() {
+        return artist.size();
     }
 
 }

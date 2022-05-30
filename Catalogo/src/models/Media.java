@@ -37,6 +37,10 @@ public class Media {
         return this.barcode;
     }
 
+    public void setBarcode(String barcode) {
+        this.barcode = barcode;
+    }
+
     public void setBarcode(int barcode) {
         int min = 100000;
         int max = 999999;

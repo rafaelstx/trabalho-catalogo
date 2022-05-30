@@ -70,24 +70,34 @@ public class CatalogRepositoryImpl implements CatalogRepository {
     }
 
     @Override
-    public int isValidBarcode(Media media) {
+    public boolean isValidBarcode(Media media) {
         for (Media m : medias) {
             if(m.equals(media)){
-                return 1;
+                return true;
             }
         }
-        return 0;
+        return false;
     }
 
     @Override
-    public int isValidName(String name) {
+    public boolean isValidName(String name) {
         for (Media m : medias) {
 
             if(m.getName().equals(name)){
-                return 1;
+                return true;
             }
         }
-        return 0;
+        return false;
+    }
+
+    @Override
+    public void removeMedia(int position) {
+        medias.remove(position);
+    }
+
+    @Override
+    public int len() {
+        return medias.size();
     }
 
 }
